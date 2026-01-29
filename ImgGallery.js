@@ -162,6 +162,7 @@ export default class ImgGallery extends HTMLElement {
 	_onEnter(evt) {
 		if (this._log) console.log('_onEnter(): ', evt.target)
 		// this img-gallery contains the focused element
+		evt.preventDefault()
 		this.selectedIndex = document.activeElement.dataset.index
 		this._openModal()
 	}
